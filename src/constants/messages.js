@@ -32,3 +32,10 @@ export const PATIENT_MESSAGES = {
   DELETED: "Patient deleted successfully.",
   NOT_FOUND: "Patient not found.",
 };
+
+export const CONTACT_MESSAGES = {
+  SUBMITTED: "Your message has been received. We will get back to you within 24 hours.",
+  FETCHED: "Contact messages fetched successfully.",
+  UPDATED: "Contact message updated successfully.",
+  NOT_FOUND: "Contact message not found.",
+};

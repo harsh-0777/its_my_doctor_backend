@@ -5,4 +5,5 @@ export {
   DOCTOR_MESSAGES,
   APPOINTMENT_MESSAGES,
   PATIENT_MESSAGES,
+  CONTACT_MESSAGES,
 } from "./messages.js";
