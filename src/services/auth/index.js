@@ -1,5 +1,6 @@
 import crypto from "crypto";
 import { User } from "../../models/index.js";
+import { getTabsForRole } from "../tab/index.js";
 import {
   ApiError,
   generateAccessToken,
@@ -72,10 +73,16 @@ export const verifyOTP = async ({ userId, otp }) => {
   user.refreshToken = refreshToken;
   await user.save();
 
+  // Fetch accessible tabs for this role — sent to the frontend on login so the
+  // client can render the correct navigation and protect routes client-side.
+  // Server-side role checks (protect + authorize) remain the real security layer.
+  const accessibleTabs = await getTabsForRole(user.role);
+
   return {
     accessToken,
     refreshToken,
-    user: { id: user._id, name: user.name, email: user.email, role: user.role },
+    user:           { id: user._id, name: user.name, email: user.email, role: user.role },
+    accessibleTabs,
   };
 };
 
