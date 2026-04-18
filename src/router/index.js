@@ -3,6 +3,9 @@ import doctorRoutes      from "./doctor.routes.js";
 import appointmentRoutes from "./appointment.routes.js";
 import patientRoutes     from "./patient.routes.js";
 import contactRoutes     from "./contact.routes.js";
+import tabRoutes         from "./tab.routes.js";
+import roleRoutes        from "./role.routes.js";
+import userRoutes        from "./user.routes.js";
 
 const API_PREFIX = "/api/v1";
 
@@ -12,4 +15,7 @@ export const mountRoutes = (app) => {
   app.use(`${API_PREFIX}/appointments`, appointmentRoutes);
   app.use(`${API_PREFIX}/patients`,     patientRoutes);
   app.use(`${API_PREFIX}/contact`,      contactRoutes);
+  app.use(`${API_PREFIX}/tabs`,         tabRoutes);
+  app.use(`${API_PREFIX}/roles`,        roleRoutes);
+  app.use(`${API_PREFIX}/users`,        userRoutes);
 };

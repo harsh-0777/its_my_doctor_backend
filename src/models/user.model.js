@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import { ROLES, ROLE_LIST } from "../constants/roles.js";
+// ROLE_LIST now includes "super_admin" — the enum is kept in sync automatically
 
 const userSchema = new mongoose.Schema(
   {

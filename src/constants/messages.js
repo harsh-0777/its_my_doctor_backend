@@ -33,9 +33,26 @@ export const PATIENT_MESSAGES = {
   NOT_FOUND: "Patient not found.",
 };
 
+export const TAB_MESSAGES = {
+  FETCHED:      "Tabs fetched successfully.",
+  UPDATED:      "Tab updated successfully.",
+  NOT_FOUND:    "Tab not found.",
+  UNAUTHORIZED: "You do not have access to this tab.",
+};
+
 export const CONTACT_MESSAGES = {
   SUBMITTED: "Your message has been received. We will get back to you within 24 hours.",
   FETCHED: "Contact messages fetched successfully.",
   UPDATED: "Contact message updated successfully.",
   NOT_FOUND: "Contact message not found.",
+};
+
+export const ROLE_MESSAGES = {
+  FETCHED:      "Roles fetched successfully.",
+  CREATED:      "Role created successfully.",
+  UPDATED:      "Role updated successfully.",
+  DELETED:      "Role deleted successfully.",
+  NOT_FOUND:    "Role not found.",
+  TAB_ASSIGNED: "Tab assigned to role successfully.",
+  TAB_REVOKED:  "Tab revoked from role successfully.",
 };
